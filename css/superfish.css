@@ -1,8 +1,9 @@
  
 .menu_block  {
-	position: relative;
-	float: right;
+	position: absolute;
+	float: center;
 	padding-top: 31px;
+	right: 200px;
 }
 
 nav>.sf-menu {
