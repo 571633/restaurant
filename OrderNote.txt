@@ -1,0 +1,12 @@
+
+
+Go to your Google Drive and create a new Google Form. Add any number of fields to the form but make sure you have a field called “Email Address” where the submitter will input their email address.
+
+Assuming that you are saving your Google Form responses in a separate spreadsheet, open that sheet and choose the Script Editor option under the Tools menu.
+
+Copy-paste the following script into the script editor and hit the floppy icon to save the script.
+
+Inside the Script Editor, choose Run – Initialize and authorize the script to send emails on your behalf.
+
+
+
