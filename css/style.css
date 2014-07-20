@@ -15,15 +15,15 @@ text-decoration:none;
 }
 
 * {
-	-webkit-text-size-adjust: none;
+	-webkit-text-size-adjust: auto;
 }
-
 
 body {
 	font: 14px/18px  Arial, Helvetica, sans-serif;
 	color:#826660;
 	position:relative;
-	min-width:960px;
+	/*min-width:960px;*/
+	min-width:100%;
 	padding-top: 27px;
 	background: #5fa022;
 
@@ -45,7 +45,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-weight: normal;
 	color: #5d0400;
 	font-family: Times New Roman;
-
 }
 
 
@@ -149,10 +148,10 @@ a.btn.m1 {
 }
 
 .img_inner {
-	max-width: 100%;
-	padding: 7px;
-	background: #fff ;
-	 -moz-box-sizing: border-box;
+ max-width: 100%;
+ padding: 7px;
+ background: #fff ;
+ -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -o-box-sizing: border-box;
  box-sizing: border-box;
@@ -238,13 +237,11 @@ header h1 a img {
 	display: block;	
 }
 
-
 .main {
 	background: #f2f0f0;
 }
 
 /*Content*/
-
 .content h2{ 
 	padding-top: 36px;
 	font-size: 24px;
@@ -307,17 +304,16 @@ header h1 a img {
 	margin-top: 15px;
 }
 
-
 .carousel1 li span {
 	line-height: 16px;
 }
 
 .carousel1 img {
-	box-shadow: 2px 2px 3px #ddd;
-	padding: 4px;
-	background: #fff;
-	border: 1px solid #e6e4e4;
-	 -moz-box-sizing: border-box;
+ box-shadow: 2px 2px 3px #ddd;
+ padding: 4px;
+ background: #fff;
+ border: 1px solid #e6e4e4;
+ -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -o-box-sizing: border-box;
  box-sizing: border-box;
@@ -400,7 +396,6 @@ header h1 a img {
 	color: #699440;
 }
 
-
 .socials a {
 	background: url(../images/socials.png) 0 0 no-repeat;
 	width: 26px;
@@ -453,7 +448,6 @@ header h1 a img {
 	padding-top: 10px;
 }
 
-
 .prev1 {
 	background: url(../images/prevnext.png) 0 bottom no-repeat;
 	display: block;
@@ -482,7 +476,6 @@ header h1 a img {
 	background-position: right 0;
 }
 
-
 .hor_separator.hor1 {
 margin-top: 13px;
 }
@@ -507,7 +500,8 @@ margin-top: 13px;
 }
 
 .chefs .col1 {
-	font-size: 12px;
+/*	font-size: 12px;*/
+	font-size: 0.9em;
 	padding-top: 8px;
 	margin-bottom: 16px;
 }
@@ -549,8 +543,6 @@ margin-top: 13px;
 #newsletter {
 	position: relative;
 }
-
-
 
 #newsletter label {
 	display: block;
@@ -606,7 +598,6 @@ margin-top: 13px;
 #newsletter label.invalid .error {
 	/*display: block;*/
 	height:40px;
-
 }
 
 #newsletter .success {
@@ -634,29 +625,32 @@ margin-top: 13px;
 /****Map***/
 
 .map {
-	padding-top: 6px;
+/*	padding-top: 6px;*/
+	padding-top: 0.45em;
 	color: #848383;
 }
 
 .map figure {
-
-
-		 -moz-box-sizing: border-box;
+ -moz-box-sizing: border-box;
  -webkit-box-sizing: border-box;
  -o-box-sizing: border-box;
  box-sizing: border-box;
  display: block;
- margin-bottom: 42px;
+/* margin-bottom: 42px;*/
+ margin-bottom: 2em;
 }
+
 .map figure iframe {
 	width: 100%;
-	height: 282px;
+/*	height: 282px;*/
+	height: 25em;
 	max-width: 100%;
 }
 
 .map address {
 	float: left;
-	margin-right: 80px;
+/*	margin-right: 80px;*/
+	margin-right: 4%;
 }
 
 .map .text1 {
@@ -665,20 +659,20 @@ margin-top: 13px;
 }
 
 address dd span {
-	min-width: 100px;
+/*	min-width: 100px;*/
+	min-width: 10%;
 	display: inline-block;
 	text-align: left;
 }
-
-
-
 
 /************Footer***********/
 
 footer {
 	display: block;
-	padding: 45px 0;
-	font-size: 12px;
+/*	padding: 45px 0;*/
+	padding: 1.5em 0;
+/*	font-size: 12px;*/
+    font-size: 0.9em;	
 	color: #fff;
 	text-align: center;
 }
