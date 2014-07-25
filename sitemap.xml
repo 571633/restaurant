@@ -4,35 +4,70 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
 <url>
   <loc>http://www.gracesmarkets.com/</loc>
-  <lastmod>2014-07-12T00:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>http://www.gracesmarkets.com/index.html</loc>
-  <lastmod>2014-07-12T00:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.gracesmarkets.com/index-2.html</loc>
-  <lastmod>2014-07-12T00:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/EggOmelette.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/Breakfast.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/Lunch.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/Order.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/OrderBreakfast.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.gracesmarkets.com/OrderLunch.html</loc>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.gracesmarkets.com/index-1.html</loc>
-  <lastmod>2014-07-12T00:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.gracesmarkets.com/index-5.html</loc>
-  <lastmod>2014-07-12T00:52:45+00:00</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
+  <lastmod>2014-07-25T03:42:16+00:00</lastmod>
+  <changefreq>daily</changefreq>
+  <priority>1</priority>
 </url>
 </urlset>
