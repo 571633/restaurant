@@ -38,6 +38,9 @@ function createForm() {
       listItem[i] = createListItem(form, ItemTitle[i], ItemDescription[i]);
     }
 
+	var nameItem = form.addTextItem();
+    nameItem.setTitle('Name: ');
+    nameItem.setRequired(true);
     var addressItem1 = form.addTextItem();
     addressItem1.setTitle('Street Address: ');
     addressItem1.setRequired(true);
@@ -77,7 +80,10 @@ function createForm() {
 	pickItem.setTitle('Delivery / Pick up');
     pickItem.setChoiceValues(['Dilivery', 'Pick up']);
     pickItem.setRequired(true);
-   
+	
+	var paraItem = form.adddParagraphTextItem();
+	pickItem.setTitle('Leave us a message for special needs:');
+
 }
 
 
