@@ -74,11 +74,12 @@ function createForm() {
   
     var timeItem = form.addTimeItem();
     timeItem.setTitle('Delivery / Pick up Time');
+	timeItem.setHelpText("Working Hours: 7:00AM~3:00PM");
     timeItem.setRequired(true);
   
   	var pickItem = form.addListItem();
 	pickItem.setTitle('Delivery / Pick up');
-    pickItem.setChoiceValues(['Dilivery', 'Pick up']);
+    pickItem.setChoiceValues(['Delivery', 'Pick up']);
     pickItem.setRequired(true);
 	
 	var paraItem = form.adddParagraphTextItem();
