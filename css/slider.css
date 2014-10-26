@@ -23,8 +23,8 @@
 	z-index:2;/*The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order.*/
 	position: absolute;
 	left: 50%;
-	margin-left: -560px; /*The margin-left property sets the left margin of an element.*/
-	width: 1120px;
+	margin-left: -480px; /*The margin-left property sets the left margin of an element.*/
+	width: 965px;
 }
 
 
