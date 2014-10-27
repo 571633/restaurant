@@ -82,7 +82,7 @@ function createForm() {
     pickItem.setChoiceValues(['Delivery', 'Pick up']);
     pickItem.setRequired(true);
 	
-	var paraItem = form.adddParagraphTextItem();
+	var paraItem = form.addParagraphTextItem();
 	pickItem.setTitle('Leave us a message for special needs:');
 
 }
