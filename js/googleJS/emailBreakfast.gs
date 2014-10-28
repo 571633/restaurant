@@ -1,7 +1,7 @@
 /* Send Confirmation Email with Google Forms */
 
 var ItemTitle = ['#1 Lite Breakfast $1.55',
-                '#2 Businesmans Breakfast $1.95',
+                '#2 Businessman Breakfast $1.95',
                 '#3 Hearty Breakfast $4.25',
                 '#4 Maine’s Favorite $4.75',
                 '#5 Country Breakfast $7.50',
@@ -10,8 +10,10 @@ var ItemTitle = ['#1 Lite Breakfast $1.55',
                 '#8 The Lumber Jack $8.95'];
 var ItemPrice = [1.55, 1.95, 4.25, 4.75, 7.50, 7.95, 7.95, 8.95];
 var openHour = 8;	// store opens at 8
-var closeHour = 15; // store closes at 15
-
+var closeHour = 18; // store closes at 18
+var freeDelivery = 20; // free delivery above 20
+//var ccEmail = ", chuanchunho@gmail.com";
+var ccEmail = ", lindaliu121220@gmail.com, ganyanyan900613@gmail.com, chuanchunho@gmail.com";
 
 function Initialize() {
 	var triggers = ScriptApp.getScriptTriggers();
@@ -27,7 +29,7 @@ function Initialize() {
 function getItemPrice(key, count)
 {
 	for(var i=0; i<ItemTitle.length; i++)
-		if(key == ItemTitle[i])
+        if(key == ItemTitle[i] && !isNaN(count))
 			return count*ItemPrice[i];
 	return 0;
 }
@@ -54,6 +56,7 @@ function SendConfirmationMail(e) {
 		var message, value, textbody, sender;
 		// This is your email address and you will be in the CC
 		cc = Session.getActiveUser().getEmail();
+		cc = cc + ccEmail;
 		ss = SpreadsheetApp.getActiveSheet();
 		columns = ss.getRange(1, 1, 1, ss.getLastColumn()).getValues()[0];
 
@@ -68,7 +71,7 @@ function SendConfirmationMail(e) {
 			if ( e.namedValues[key] ) {
 				orderDetail += key + ' :: '+ e.namedValues[key] + "<br>";
                 price += getItemPrice(key, parseInt(e.namedValues[key]));
-			    if(key == 'Delivery / Pick up Date')
+				if(key == 'Delivery / Pick up Date')
                   DeliveryDate = e.namedValues[key];
 			    if(key == 'Delivery / Pick up Time')
                   DeliveryTime = e.namedValues[key].toString();
@@ -81,7 +84,7 @@ function SendConfirmationMail(e) {
 		{
 			subject = "Your Order Failed to Submit";
 			message += "Sorry your order failed to submit since you didn't order anything. <br><br>";
-            message += "Here is your order detail:<br>";
+            message += "Here is your order detail:<br><br>";
             message += orderDetail;
 		}
 		else if(!checkTimeValidation(DeliveryDate, DeliveryTime))
@@ -98,23 +101,25 @@ function SendConfirmationMail(e) {
 			message += "Thank you for ordering with Grace’s Market! <br>  Your order has been received and is being processed at this time. Please take a moment to review your order summary below. If you have any questions about your order, please send an email to gracesmarkets@gmail.com or give us a call. All future order updates will be sent to you via email.<br><br> Order Confirmation:<br>"
             message += orderDetail;
 
-			message += "Subtotal: $" + price.toString() + "<br>";
-			message += "Sales Tax: $0.00 <br/>";
-            if(Delivery)
+			message += "<br>Subtotal: $" + price.toString() + "<br>";
+			var tax = 0.09*price;
+			message += "Sales Tax: $" + tax.toFixed(2).toString() + "<br/>";
+			price = price+tax;
+            if(Delivery && price<freeDelivery)
             {
-              message += "Delivery fee: $1.50 <br/>";
-              price += 1.5;
+              message += "Delivery fee: $2.00 <br/>";
+              price += 2;
             }
-			message += "Order Total: $" + price.toString() +"<br>";
+			message += "Order Total: $" + price.toFixed(2).toString() +"<br>";
 		}
-		message += "<br>http://www.gracesmarkets.com <br> 5 Lawrence Rd, Salem, NH 03079 <br> (603) 912-5911 <br>Hours of Operations: Mon-Sat - 7:00 am - 3:00 pm <br> Important Note: Please do not reply to this email message as this is an automated order confirmation."
+		message += "<br>http://www.gracesmarkets.com <br> 5 Lawrence Rd, Salem, NH 03079 <br> (603) 912-5911 <br>Hours of Operations: Mon-Sat - 7:00 am - 6:00 pm <br> Important Note: Please do not reply to this email message as this is an automated order confirmation."
 
 		textbody = message.replace("<br>", "\n");
 		sendername = "Graces Market";			// This will show up as the sender's name
 		GmailApp.sendEmail(	e.namedValues["Email Address:"].toString(),	//the email address of submitter 
 							subject, textbody,
-							{cc: cc, name: sendername, htmlBody: message});
+							{bcc: cc, name: sendername, htmlBody: message});
 	} catch (e) {
-      Logger.log(e.toString() + 'line:' + (new Error()).lineNumber);
+      Logger.log('Error at line ' + e.lineNumber.toString() + ' ' + e.name + ': ' + e.message);
 	}
 }

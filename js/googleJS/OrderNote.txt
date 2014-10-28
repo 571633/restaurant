@@ -1,11 +1,13 @@
 
-1. Go to your Google Drive and create a new Google Form. Add any number of fields to the form but make sure you have a field called “Email Address” where the submitter will input their email address.
+1. Go to your Google Drive and create a new Google Form. 
+Add any number of fields to the form but make sure you have a field called “Email Address” where the submitter will input their email address.
 
 2. 
-Open Base
+Open Base form
 Tools -> Script Editor
 Run script, than a form is created at the root folder.
-Assuming that you are saving your Google Form responses in a separate spreadsheet, open that sheet and choose the Script Editor option under the Tools menu.
+
+3. Assuming that you are saving your Google Form responses in a separate spreadsheet, open that sheet and choose the Script Editor option under the Tools menu.
 
 Copy-paste the following script into the script editor and hit the floppy icon to save the script.
 
@@ -17,6 +19,9 @@ Responses -> accept
 
 4. Open (Responses) file
 
+Bug:
+1. Error at line 70 TypeError: Cannot read property "namedValues" from undefined.
+Need to run the initialization trigger 
 
 
 

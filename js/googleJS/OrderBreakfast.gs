@@ -83,8 +83,7 @@ function createForm() {
     pickItem.setRequired(true);
 	
 	var paraItem = form.addParagraphTextItem();
-	pickItem.setTitle('Leave us a message for special needs:');
+	paraItem.setTitle('Leave us a message for special needs:');
 
 }
-
 
