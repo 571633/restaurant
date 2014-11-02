@@ -14,7 +14,7 @@ function createForm() {
     var form = FormApp.create('Grace\'s Market Lunch');
 
 
-	var LunchBoxItemTitle = ["Chicken Tenders $6.95",
+	var item = ["Chicken Tenders $6.95",
 		"Mozzarella Sticks $6.95",
 		"Buffalo Tenders $6.95",
 		"Small Onion Rings $2.50",
@@ -24,28 +24,44 @@ function createForm() {
 		"Large Size French Fries $4.50",
 		"Buffalo/BBQ Wings $6.95",
 		"Side Salad $2.50",
-		"Chipotle Wings $6.95"];
+		"Chipotle Wings $6.95",
+		
+		"Cold Sandwiches - Bologna $4.95",
+		"Cold Sandwiches - Ham+cheese $6.00",
+		"Cold Sandwiches - Turkey $6.50",
+		"Cold Sandwiches - Roast beef club $6.50",
+		"Cold Sandwiches - Tuna $6.50",
+		"Cold Sandwiches - Chicken Salad (dried cranberries) $6.50",
+		"Cold Sandwiches - BLT $5.95",
+		"Cold Sandwiches - Italian $6.95",
+		"Cold Sandwiches - Vegetarian $6.95",
+		
+		"Hot Sandwiches - Hot Dog $2.50",
+		"Hot Sandwiches - Grilled Cheese $3.50",
+		"Hot Sandwiches - Eggplant $6.50",
+		"Hot Sandwiches - Chicken Parmigiana $6.50",
+		"Hot Sandwiches - Veal Parmigiana $6.50",
+		"Hot Sandwiches - Grilled Chicken sub $6.50",
+		"Hot Sandwiches - Grill Chicken Chipotle w/Jalepeno Jack $7.95",
+		"Hot Sandwiches - Eggplant Parmesan $6.50",
+		"Hot Sandwiches - Buffalo Chicken $6.50",
+		"Hot Sandwiches - Cheeseburger $6.95",
+		"Hot Sandwiches - Chicken finger $6.95",
+		"Hot Sandwiches - Meatball $6.50",
+		"Hot Sandwiches - Steak Tip and Cheese $7.50"];
 
-    var LunchBoxItemPrice = [6.95, 6.95, 6.95, 2.50, 4.50, 6.95, 2.50, 4.50, 6.95, 2.50, 6.95];
-	var LunchBoxItemDescription = ['', '', '', '', '', '', '', '', '', '', '']
-   
-	if (LunchBoxItemTitle.length != LunchBoxItemPrice.length || LunchBoxItemTitle.length != LunchBoxItemDescription.length){
+    var itemPrice = [6.95, 6.95, 6.95, 2.50, 4.50, 6.95, 2.50, 4.50, 6.95, 2.50, 6.95,
+					4.95, 6.00, 6.50, 6.50, 6.50, 6.50, 5.95, 6.95, 6.95,
+					2.50, 3.50, 6.50, 6.50, 6.50, 6.50, 7.95, 6.50, 6.50, 6.95, 6.95, 6.50, 7.50];
+	
+	if (item.length != itemPrice.length){
 		throw new Error("Item member numbers don't match");
 	}
 
 	//create item array
-	var LunchBoxItems = [];
-	for(var i=0; i<LunchBoxItemTitle.length; i++)
-	{
-		// ItemTitle[i] is used as key
-		LunchBoxItems[LunchBoxItemTitle[i]] = { lunchBoxItemPrice: LunchBoxItemPrice [i], 
-								lunchBoxItemDescription: LunchBoxItemDescription[i]};
-	}
-
-    var lunchBoxListItem = [];
-    for (var i = 0; i < LunchBoxItemTitle.length; i++) {
-	  var key = LunchBoxItemTitle[i];
-      lunchBoxListItem[i] = createListItem(form, key, LunchBoxItems[key].itemDescription);
+    var dinnerListItem = [];
+    for (var i = 0; i < item.length; i++) {
+      dinnerListItem[i] = createListItem(form, item[i], "");
     }
 
     var nameItem = form.addTextItem();
@@ -94,6 +110,5 @@ function createForm() {
 
     var paraItem = form.addParagraphTextItem();
     paraItem.setTitle('Leave us a message for special needs:');
-
 
 }
