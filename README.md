@@ -1,4 +1,4 @@
 restaurant
 ==========
 
-restaurant website: http://571633.github.io/restaurant/
+restaurant website: http://ncu571633.github.io/restaurant/
