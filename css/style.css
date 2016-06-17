@@ -491,6 +491,12 @@ margin-top: 13px;
 	margin-bottom: 20px;
 }
 
+.content h2.head3 {
+	font-size: 15px;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
 .chefs {
 	padding-top: 7px;
 }
